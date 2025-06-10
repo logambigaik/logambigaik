@@ -31,7 +31,7 @@ Proficient in writing SQL queries for data extraction, transformation, and analy
  
 ### ☁️ Microsoft Azure  
 <img src="https://img.icons8.com/color/48/000000/azure-1.png" width="40" />  
-Basic experience with Azure services including Azure SQL, storage, and cloud-based data pipelines.
+Basic experience with Azure services including Azure SQL, storage, fabric and cloud-based data pipelines.
  
 ---
  
