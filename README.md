@@ -1,16 +1,30 @@
-## Hi there 👋
+# 👋 Hi, I'm Logambigai Kuppusamy
 
-<!--
-**logambigaik/logambigaik** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+🔧 A results-driven IT professional with over 5 years of experience as a **Splunk Admin and Developer**, and 3+ years of hands-on expertise in **Python** and **AWS**. Passionate about data-driven solutions, automation, and cloud technologies.
 
-Here are some ideas to get you started:
+## 🏆 Certifications
+- **Splunk Cloud Certified Admin**
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## 💼 Professional Experience
+- 5+ years of experience working with **Splunk Enterprise** and **Splunk Cloud** as both an Admin and Developer.
+- 3 years of experience in **Python development** and working on **AWS** services for building and deploying cloud-based solutions.
+
+## 🚀 Recent Projects & Technologies
+- Built dashboards and data models in **Power BI** and **Tableau**
+- Worked extensively with **Microsoft Excel** and **SQL** for data analysis and reporting
+- Hands-on experience with **Azure services**:
+  - Azure Service Fabric
+  - Azure Cosmos DB
+  - Azure Storage
+- Data wrangling and analytics using **Python** and **Pandas**
+
+## 🛠️ Technical Skills
+- **Data Visualization**: Power BI, Tableau, Excel
+- **Cloud Platforms**: AWS, Azure (Cosmos DB, Storage, Service Fabric)
+- **Scripting & Automation**: Python, Bash
+- **Monitoring & Logging**: Splunk Enterprise, Splunk Cloud
+- **Databases**: SQL Server, MySQL, Azure Cosmos DB
+- **Data Processing**: Pandas, NumPy
+
+## 📫 Let's Connect!
+Feel free to reach out if you're interested in data solutions, automation, cloud tech, or just want to chat about Splunk or Python!
