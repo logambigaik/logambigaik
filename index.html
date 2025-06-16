@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Me</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8fafc;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2d3748;
+    }
+
+    .accordion {
+      border-radius: 12px;
+      background-color: #fff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+      overflow: hidden;
+    }
+
+    .accordion-header {
+      background-color: #2b6cb0;
+      color: white;
+      padding: 18px 24px;
+      cursor: pointer;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .accordion-header:hover {
+      background-color: #24548c;
+    }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.4s ease;
+      background: #f1f5f9;
+      padding: 0 24px;
+    }
+
+    .accordion-content.show {
+      max-height: 2000px;
+      padding: 20px 24px;
+    }
+
+    .icon {
+      transition: transform 0.4s ease;
+    }
+
+    .icon.rotate {
+      transform: rotate(90deg);
+    }
+
+    .entry-title {
+      font-weight: bold;
+      margin-top: 16px;
+      color: #1a202c;
+    }
+
+    .entry-sub {
+      font-style: italic;
+      color: #4a5568;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      margin: 0 0 20px 20px;
+      padding: 0;
+    }
+
+    p {
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #2b6cb0;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1> 🙋 About Me </h1>
+
+    <!-- Professional Summary Section -->
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        🧠 Professional Summary <span class="icon">▶</span>
+      </div>
+      <div class="accordion-content">
+        <p>
+          I am a highly motivated and data-driven professional with a strong analytical mindset and a proven track record in data analytics, system administration, and cloud technologies. With over a decade of experience across enterprise environments, I bring deep technical expertise in Splunk, SQL, Python, and cloud platforms including AWS and Azure.
+        </p>
+        <p>
+          Throughout my career, I have led end-to-end implementation of data platforms, developed scalable monitoring solutions, and designed interactive dashboards that drive informed decision-making. My ability to automate processes, extract actionable insights from complex datasets, and troubleshoot at both the system and application levels has consistently added value to business operations.
+        </p>
+        <p>
+          Having worked with industry leaders such as Aviva, Goldman Sachs, RBS, BNY Mellon, and Accenture, I am adept at collaborating with cross-functional teams, managing stakeholder expectations, and ensuring the performance and integrity of critical systems.
+        </p>
+        <p>
+          I continually invest in upskilling, most recently completing an intensive training in data analytics and cloud technologies in the UK. I thrive in dynamic environments that challenge me to learn, adapt, and deliver impactful solutions. My strong problem-solving skills, attention to detail, and passion for data make me a valuable asset to any forward-thinking organisation.
+        </p>
+      </div>
+    </div>
+
+    <!-- Projects Accordion -->
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        💼 Project Highlights <span class="icon">▶</span>
+      </div>
+      <div class="accordion-content">
+        <div class="entry-title">Aviva (via Wipro & Trilogy) – Splunk Admin/Developer</div>
+        <div class="entry-sub">📍 London | Mar 2022 – Mar 2025</div>
+        <ul>
+          <li>Managed Splunk architecture across multi-data center environments</li>
+          <li>Built dashboards, alerts, and reports for security and monitoring</li>
+          <li>Automated onboarding and scripted field extractions</li>
+          <li>Led AWS migration support and access role configuration</li>
+        </ul>
+
+        <div class="entry-title">Goldman Sachs – Splunk Admin/Developer</div>
+        <div class="entry-sub">📍 London | Mar 2021 – Feb 2022</div>
+        <ul>
+          <li>Built distributed Splunk on AWS with forwarders & HEC</li>
+          <li>Created operational dashboards and alerts</li>
+          <li>Resolved performance issues with Splunk Support</li>
+        </ul>
+
+        <div class="entry-title">RBS – Splunk Engineer</div>
+        <div class="entry-sub">📍 London | Jun 2020 – Feb 2021</div>
+        <ul>
+          <li>Built dashboards for financial data analysis</li>
+          <li>Used DB Connect and KV Store for log transformation</li>
+          <li>Applied summary indexing and alert tuning</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Education Accordion -->
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        🎓 Education & Certifications <span class="icon">▶</span>
+      </div>
+      <div class="accordion-content">
+        <div class="entry-title">Just IT Training Ltd, London, UK</div>
+        <div class="entry-sub">📅 2024 – 2025 | Digital Skills Bootcamp – Data Technician</div>
+        <ul>
+          <li>Data Architecture & Governance</li>
+          <li>Data Analysis using MS Excel</li>
+          <li>Data Visualization with Tableau & Power BI</li>
+          <li>Database Access using SQL</li>
+          <li>Introduction to R Programming (EDA & Data Cleaning)</li>
+          <li>Python for Data Analysis (Pandas, Matplotlib, Seaborn)</li>
+          <li>Microsoft Azure Fundamentals</li>
+        </ul>
+
+        <div class="entry-title">Bharathiar University, India</div>
+        <div class="entry-sub">📅 2003 – 2005 | M.Sc. in Statistics with Computer Applications – 75%</div>
+
+        <div class="section-title">🏅 Professional Certifications</div>
+        <ul>
+          <li>Splunk Certified Cloud Admin</li>
+          <li>Splunk Core Certified Power User</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleAccordion(header) {
+      const icon = header.querySelector(".icon");
+      const content = header.nextElementSibling;
+
+      const isOpen = content.classList.contains("show");
+
+      document.querySelectorAll(".accordion-content").forEach(c => c.classList.remove("show"));
+      document.querySelectorAll(".icon").forEach(i => i.classList.remove("rotate"));
+
+      if (!isOpen) {
+        content.classList.add("show");
+        icon.classList.add("rotate");
+      }
+    }
+  </script>
+</body>
+</html>
