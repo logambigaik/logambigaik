@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Data Journey Highlights - Home</title>
+  <style>
+    /* Reset & base */
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f4f8;
+      color: #333;
+      line-height: 1.6;
+    }
+    a {
+      color: #0078d4;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      background-color: #0078d4;
+      color: white;
+      padding: 25px 20px;
+      text-align: center;
+      border-bottom: 4px solid #005a9e;
+    }
+    header h1 {
+      font-size: 2.8rem;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+    }
+    header p {
+      font-weight: 300;
+      font-size: 1.2rem;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 30px auto;
+      padding: 0 20px 50px;
+    }
+
+    h2.section-title {
+      font-size: 2rem;
+      color: #0078d4;
+      border-bottom: 3px solid #005a9e;
+      padding-bottom: 6px;
+      margin-bottom: 20px;
+    }
+
+    /* Cards grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      gap: 25px;
+      margin-bottom: 40px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 120, 212, 0.15);
+      padding: 20px;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+      cursor: default;
+    }
+    .card:hover {
+      box-shadow: 0 10px 25px rgba(0, 120, 212, 0.3);
+      transform: translateY(-6px);
+    }
+    .card h3 {
+      color: #005a9e;
+      margin-bottom: 12px;
+      font-size: 1.4rem;
+    }
+    .card p {
+      color: #444;
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+
+    /* Skill badges */
+    .badges {
+      margin-top: 12px;
+    }
+    .badge {
+      display: inline-block;
+      background: #0078d4;
+      color: white;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 20px;
+      margin: 5px 8px 0 0;
+      font-size: 0.9rem;
+      user-select: none;
+      transition: background 0.3s ease;
+    }
+    .badge:hover {
+      background: #005a9e;
+    }
+
+    footer {
+      background-color: #0078d4;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 1rem;
+      border-top: 4px solid #005a9e;
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      h2.section-title {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <section>
+    <h2 class="section-title">Core Skills</h2>
+    <div class="card">
+      <h3>Data Wrangling & Cleaning</h3>
+      <p>Expertise in preparing raw data for analysis using Python (Pandas), Excel, and SQL to ensure accuracy and consistency.</p>
+      <div class="badges">
+        <span class="badge">Python</span>
+        <span class="badge">Pandas</span>
+        <span class="badge">SQL</span>
+        <span class="badge">Excel</span>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Data Visualization</h3>
+      <p>Creating impactful and intuitive visualizations that tell a compelling story using Tableau, Power BI, and Matplotlib.</p>
+      <div class="badges">
+        <span class="badge">Tableau</span>
+        <span class="badge">Power BI</span>
+        <span class="badge">Matplotlib</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Highlighted Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Sales Forecasting Model</h3>
+        <p>Developed a forecasting model using time series analysis that improved accuracy of monthly sales predictions by 25%.</p>
+      </div>
+      <div class="card">
+        <h3>Customer Segmentation</h3>
+        <p>Performed clustering analysis to identify key customer segments, enabling targeted marketing campaigns and increased engagement.</p>
+      </div>
+      <div class="card">
+        <h3>Interactive Dashboard</h3>
+        <p>Built an interactive dashboard to monitor real-time KPIs and empower stakeholders with actionable insights.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Tools & Technologies</h2>
+    <div class="badges" style="max-width: 600px;">
+      <span class="badge">Python</span>
+      <span class="badge">SQL</span>
+      <span class="badge">Tableau</span>
+      <span class="badge">Power BI</span>
+      <span class="badge">Excel</span>
+      <span class="badge">Jupyter Notebook</span>
+      <span class="badge">Git</span>
+      <span class="badge">AWS</span>
+    </div>
+  </section>
+
+  <section style="margin-top: 40px;">
+    <h2 class="section-title">Ongoing Learning & Insights</h2>
+    <div class="card">
+      <h3>Continuous Growth</h3>
+      <p>Committed to expanding knowledge in machine learning, cloud data services, and advanced analytics techniques.</p>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  &copy; 2025 Logambigai Kuppusamy | Data Analytics Portfolio
+</footer>
+
+</body>
+</html>
