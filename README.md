@@ -51,6 +51,6 @@ Capable of building sleek, interactive Power BI dashboards with DAX measures, ca
  
 - 🌐 [LinkedIn](linkedin.com/in/logak)
 - 📁 [My Portfolio](#)
-- 📧 googlewebsite .com
+- 📧 [googlewebsite .com](https://sites.google.com/view/loga-k/my-portfolio)
  
 ---
