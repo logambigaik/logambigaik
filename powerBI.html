@@ -68,6 +68,14 @@
       margin-top: 4px;
     }
 
+    .icon {
+      transition: transform 0.4s ease;
+    }
+
+    .icon.rotate {
+      transform: rotate(90deg);
+    }
+    
     @media (max-width: 600px) {
       .accordion-header {
         font-size: 1em;
@@ -79,21 +87,21 @@
   <div class="container">
 
     <div class="accordion-section">
-      <div class="accordion-header">🗂 Data Preparation and Loading</div>
+      <div class="accordion-header">🗂 Data Preparation and Loading<span class="icon">▶</span></div>
       <div class="accordion-content">
         <div class="lab">
-          <div class="lab-title">Lab 1: Get Data in Power BI Desktop<span class="icon">▶</span></div>
+          <div class="lab-title">Lab 1: Get Data in Power BI Desktop</div>
           <div class="lab-desc">Learned how to connect to various data sources like Excel, CSV, and web datasets and import them into Power BI.</div>
         </div>
         <div class="lab">
-          <div class="lab-title">Lab 2: Load Transformed Data in Power BI Desktop<span class="icon">▶</span></div>
+          <div class="lab-title">Lab 2: Load Transformed Data in Power BI Desktop</div>
           <div class="lab-desc">Used Power Query Editor to clean, transform, and load data into Power BI's data model.</div>
         </div>
       </div>
     </div>
 
     <div class="accordion-section">
-      <div class="accordion-header">🧩 Data Modeling and Calculations</div>
+      <div class="accordion-header">🧩 Data Modeling and Calculations<span class="icon">▶</span></div>
       <div class="accordion-content">
         <div class="lab">
           <div class="lab-title">Lab 3: Design a Data Model in Power BI<span class="icon">▶</span></div>
@@ -111,7 +119,7 @@
     </div>
 
     <div class="accordion-section">
-      <div class="accordion-header">📊 Report Design and Enhancement</div>
+      <div class="accordion-header">📊 Report Design and Enhancement<span class="icon">▶</span></div>
       <div class="accordion-content">
         <div class="lab">
           <div class="lab-title">Lab 6: Design a Report in Power BI Desktop</div>
@@ -125,7 +133,7 @@
     </div>
 
     <div class="accordion-section">
-      <div class="accordion-header">📈 Data Analysis and Security</div>
+      <div class="accordion-header">📈 Data Analysis and Security<span class="icon">▶</span></div>
       <div class="accordion-content">
         <div class="lab">
           <div class="lab-title">Lab 8: Perform Data Analysis in Power BI</div>
@@ -150,6 +158,20 @@
         content.style.display = isOpen ? 'none' : 'block';
       });
     });
+
+    function toggleAccordion(header) {
+      const icon = header.querySelector(".icon");
+      const content = header.nextElementSibling;
+      const isOpen = content.classList.contains("open");
+
+      document.querySelectorAll(".accordion-content").forEach(c => c.classList.remove("open"));
+      document.querySelectorAll(".icon").forEach(i => i.classList.remove("rotate"));
+
+      if (!isOpen) {
+        content.classList.add("open");
+        icon.classList.add("rotate");
+      }
+    }
   </script>
 </body>
 </html>
