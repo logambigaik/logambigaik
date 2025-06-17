@@ -211,7 +211,7 @@ HAVING Region IS NOT NULL;</code></pre>
     <!-- Inserted content -->
     <div class="accordion">
       <div class="accordion-header" onclick="toggleAccordion(this)">
-        Lesson 1: SELECT Queries <span class="icon">▶</span>
+        SELECT Queries <span class="icon">▶</span>
       </div>
       <div class="accordion-content">
         <div class="zoom-box">
@@ -232,7 +232,45 @@ HAVING Region IS NOT NULL;</code></pre>
         </div>
       </div>
     </div>
+<!-- Section 6 -->
+<div class="accordion">
+  <div class="accordion-header" onclick="toggleAccordion(this)">
+    Show movies that performed better internationally <span class="icon">▶</span>
+  </div>
+  <div class="accordion-content">
+    <div class="zoom-box">
+      <strong>Description:</strong> List movies where international sales exceeded domestic sales.
+    </div>
+    <div class="zoom-box">
+      <strong>SQL Query:</strong>
+      <pre><code>SELECT Title, Domestic_sales, International_sales 
+FROM movies 
+JOIN Boxoffice ON movies.id = Boxoffice.movie_id 
+WHERE International_sales > Domestic_sales;</code></pre>
+    </div>
+  </div>
+</div>
 
+<!-- Section 7 -->
+<div class="accordion">
+  <div class="accordion-header" onclick="toggleAccordion(this)">
+    List all movies by ratings (highest to lowest) <span class="icon">▶</span>
+  </div>
+  <div class="accordion-content">
+    <div class="zoom-box">
+      <strong>Description:</strong> Join with box office data and sort all movies by rating.
+    </div>
+    <div class="zoom-box">
+      <strong>SQL Query:</strong>
+      <pre><code>SELECT Title, Rating 
+FROM movies 
+JOIN Boxoffice ON movies.id = Boxoffice.movie_id 
+ORDER BY Rating DESC;</code></pre>
+    </div>
+  </div>
+</div>
+
+    
     <h2>WorldDB SQL </h2>
     <!-- Inserted content -->
     <div class="accordion">
@@ -246,6 +284,149 @@ HAVING Region IS NOT NULL;</code></pre>
       </div>
     </div>
   </div>
+
+  <!-- 2 -->
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        List of Cities <span class="icon">▶</span>
+      </div>
+      <div class="accordion-content">
+        <div class="zoom-box"><pre><code>SELECT DISTINCT CountryCode, Name, District FROM city;</code></pre></div>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        Count of Cities in the USA <span class="icon">▶</span>
+      </div>
+      <div class="accordion-content">
+        <div class="zoom-box"><pre><code>-- Using JOIN
+SELECT COUNT(DISTINCT city.Name) AS CitiesInUSA, country.Name 
+FROM city 
+JOIN country ON city.CountryCode = country.Code 
+WHERE country.Name = 'United States';
+
+-- Without JOIN
+SELECT COUNT(DISTINCT Name) AS CitiesInUSA 
+FROM city 
+WHERE CountryCode IN (
+    SELECT Code FROM country WHERE Name = 'United States'
+);</code></pre></div>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        Country with Highest Life Expectancy <span class="icon">▶</span>
+      </div>
+      <div class="accordion-content">
+        <div class="zoom-box"><pre><code>SELECT Name AS CountryName, LifeExpectancy 
+FROM country 
+WHERE LifeExpectancy = (SELECT MAX(LifeExpectancy) FROM country);</code></pre></div>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        City Name Filters and Patterns <span class="icon">▶</span>
+      </div>
+      <div class="accordion-content">
+        <div class="zoom-box"><pre><code>-- Cities starting with 'New'
+SELECT Name FROM world.city WHERE Name LIKE 'New%';
+
+-- Cities starting with 'Be' sorted by population
+SELECT * FROM world.city 
+WHERE Name LIKE 'Be%' 
+ORDER BY Population DESC;</code></pre></div>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        City Population Queries <span class="icon">▶</span>
+      </div>
+      <div class="accordion-content">
+        <div class="zoom-box"><pre><code>-- Top 10 populous cities
+SELECT * FROM world.city 
+ORDER BY Population DESC 
+LIMIT 10;
+
+-- Cities with population > 2M
+SELECT * FROM world.city 
+WHERE Population > 2000000 
+ORDER BY Population DESC;
+
+-- Cities between 500K and 1M
+SELECT Name, CountryCode, Population 
+FROM world.city 
+WHERE Population BETWEEN 500000 AND 1000000 
+ORDER BY Population DESC;</code></pre></div>
+      </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        Alphabetical City Listings <span class="icon">▶</span>
+      </div>
+      <div class="accordion-content">
+        <div class="zoom-box"><pre><code>SELECT Name FROM world.city ORDER BY Name ASC;</code></pre></div>
+      </div>
+    </div>
+
+    <!-- 8 -->
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        Largest and Smallest Cities <span class="icon">▶</span>
+      </div>
+      <div class="accordion-content">
+        <div class="zoom-box"><pre><code>-- Most populous city
+SELECT Name AS CityName, CountryCode, Population 
+FROM world.city 
+ORDER BY Population DESC 
+LIMIT 1;
+
+-- 10 least populous cities
+SELECT Name AS CityName, CountryCode, Population 
+FROM world.city 
+ORDER BY Population ASC 
+LIMIT 10;</code></pre></div>
+      </div>
+    </div>
+
+    <!-- 9 -->
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        Group By with HAVING Clause <span class="icon">▶</span>
+      </div>
+      <div class="accordion-content">
+        <div class="zoom-box"><pre><code>-- Group cities by name
+SELECT Name AS CityName, COUNT(Name) AS OccurrenceCount 
+FROM world.city 
+GROUP BY Name 
+ORDER BY Name ASC;
+
+-- Optional filter
+-- HAVING COUNT(Name) > 3</code></pre></div>
+      </div>
+    </div>
+
+    <!-- 10 -->
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        Most Populated Country <span class="icon">▶</span>
+      </div>
+      <div class="accordion-content">
+        <div class="zoom-box"><pre><code>SELECT Name AS CountryName, Population 
+FROM world.country 
+ORDER BY Population DESC 
+LIMIT 1;</code></pre></div>
+      </div>
+    </div>
 
   <script>
     function toggleAccordion(header) {
