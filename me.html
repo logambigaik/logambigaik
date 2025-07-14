@@ -2,36 +2,154 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Education & IT Experience</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Professional Portfolio</title>
+  <!-- AOS Animation CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 2rem;
+      color: #333;
+      background: linear-gradient(135deg, #f0f4ff, #d9e4ff);
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 2rem;
+    }
+    .profile-img {
+      display: block;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin: 0 auto 1.5rem;
+      object-fit: cover;
+      box-shadow: 0 0 15px rgba(41, 128, 185, 0.6);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .profile-img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 30px rgba(41, 128, 185, 1);
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 8px 20px rgba(41, 128, 185, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .card::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at center, rgba(41,128,185,0.2), transparent 70%);
+      animation: glow 4s ease-in-out infinite alternate;
+      pointer-events: none;
+      border-radius: 12px;
+      z-index: 0;
+    }
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 12px 30px rgba(41, 128, 185, 0.3);
+    }
+    @keyframes glow {
+      0% {
+        filter: blur(8px);
+        opacity: 0.3;
+      }
+      100% {
+        filter: blur(20px);
+        opacity: 0.6;
+      }
+    }
+    .card h2 {
+      border-bottom: 2px solid #2980b9;
+      padding-bottom: 0.5rem;
+      color: #2980b9;
+      margin-bottom: 1rem;
+      position: relative;
+      z-index: 1;
+    }
+    .item {
+      margin-top: 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+    .item h3 {
+      margin: 0 0 0.5rem 0;
+      color: #2c3e50;
+    }
+    .item p, .item ul {
+      margin: 0 0 1rem 0;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    ul li {
+      margin-bottom: 0.5rem;
+    }
+    @media (max-width: 600px) {
+      .card {
+        padding: 1rem;
+      }
+      .profile-img {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
   <div class="container">
-    <h1>About Me</h1>
+    <h1 data-aos="fade-down" data-aos-duration="800">🙋 About Me</h1>
+
+    <img src="https://i.pravatar.cc/150" alt="Profile Image" class="profile-img" data-aos="zoom-in" data-aos-duration="800" />
 
     <!-- Education Section -->
-    <section class="card">
+    <section class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
       <h2>🎓 Education</h2>
-      <div class="item">
+
+      <div class="item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
         <h3>Master of Science in Statistics with Computer Application</h3>
         <p><strong>Bharathiar University</strong> — 2003–2005</p>
         <p>Graduated with First Class Honors. Focused on statistics, data structures, and computer applications.</p>
       </div>
+
       <div class="item">
         <h3>Bachelor of Computer Science </h3>
         <p><strong>Bharathiar University</strong> — 2000–2003</p>
-        <p>Graduated with First Class Honors. Focused on statistics, data structures, and computer applications.</p>
+        <ul>
+          <li>Graduated with First Class Honors</li>
+          <li>Focused on programming, data structures, software engineering, and application development</li>
+          <li>Completed academic projects in C++, Java, and database management</li>
+        </ul>
       </div>
+
     </section>
 
     <!-- IT Experience Section -->
-    <section class="card">
+    <section class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
       <h2>💼 IT Experience</h2>
-      <div class="item">
-        <h3>Splunk Admin/Developer</h3>
-        <p><strong>Aviva</strong> — Mar 2022–Present</p>
+
+      <div class="item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+        <h3>Splunk Admin/Developer - Aviva</h3>
+        <p>Mar 2022–Present</p>
         <ul>
           <li>Worked on full-stack web applications using React, Node.js, and PostgreSQL.</li>
           <li>Implemented RESTful APIs and optimized database performance.</li>
@@ -39,56 +157,62 @@
         </ul>
       </div>
 
-      <div class="item">
-        <h3>Splunk Admin/Developer</h3>
-        <p><strong>Aviva</strong> — Mar 2022–Mar 2025</p>
+      <div class="item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+        <h3>Splunk Admin/Developer - Aviva</h3>
+        <p>Mar 2022–Mar 2025</p>
         <ul>
-         <li>Installed, configured, and maintained Splunk Enterprise 8.x, including Search Head and Indexer Clusters, Universal and Heavy Forwarders.</li>
-         <li>Designed and implemented high-availability Splunk architectures across multi-data centre environments; supported upgrade and migration efforts to AWS.</li>
-         <li>Developed and optimized dashboards, alerts, reports, and custom queries to support monitoring, performance analysis, and Enterprise Security use cases.</li>
-         <li>On-boarded diverse data sources performed field extractions (regex/delimiters), and automated routine tasks with custom scripts to enhance efficiency.</li>
-         <li>Deployed and managed the Splunk App for Enterprise Security, including correlation searches, risk scoring, and compliance-focused reporting.</li>
-         <li>Collaborated with engineers and analysts to troubleshoot issues, enhance business intelligence insights, and maintain infrastructure health.</li>
-         <li>Managed user roles, permissions, and supported incident/change management processes using BMC Remedy.</li>
+          <li>Installed, configured, and maintained Splunk Enterprise 8.x, including Search Head and Indexer Clusters, Universal and Heavy Forwarders.</li>
+          <li>Designed and implemented high-availability Splunk architectures across multi-data centre environments; supported upgrade and migration efforts to AWS.</li>
+          <li>Developed and optimized dashboards, alerts, reports, and custom queries to support monitoring, performance analysis, and Enterprise Security use cases.</li>
+          <li>On-boarded diverse data sources performed field extractions (regex/delimiters), and automated routine tasks with custom scripts to enhance efficiency.</li>
+          <li>Deployed and managed the Splunk App for Enterprise Security, including correlation searches, risk scoring, and compliance-focused reporting.</li>
+          <li>Collaborated with engineers and analysts to troubleshoot issues, enhance business intelligence insights, and maintain infrastructure health.</li>
+          <li>Managed user roles, permissions, and supported incident/change management processes using BMC Remedy.</li>
         </ul>
       </div>
 
-      <div class="item">
-        <h3>Splunk Admin/Developer</h3>
-        <p><strong>Goldman Sachs</strong> — Mar 2021–Feb 2022</p>
+      <div class="item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
+        <h3>Splunk Admin/Developer - Goldman Sachs</h3>
+        <p>Mar 2021–Feb 2022</p>
         <ul>
           <li>Installed and maintained a distributed Splunk infrastructure with Search Head and Indexer Clustering on AWS; regularly performed upgrades of Splunk instances, syslog servers, and heavy forwarders.</li>
           <li>On-board log data using Universal Forwarders and HTTP Event Collector (HEC); configured inputs via props.conf and transforms.conf to optimize license usage.</li>
-          <li>Developed and maintained dashboards, alerts, and scheduled reports across multiple teams; implemented summary indexing and deep-dive glass tables for performance monitoring  .</li>
+          <li>Developed and maintained dashboards, alerts, and scheduled reports across multiple teams; implemented summary indexing and deep-dive glass tables for performance monitoring.</li>
           <li>Created and optimized data models (CIM), dashboards, and alerts for real-time and historical views into business transactions, infrastructure, and application health.</li>
           <li>Deployed Splunk apps for UNIX/Linux, built use cases for threat detection, and integrated threat intelligence to enhance Enterprise Security functionalities.</li>
         </ul>
       </div>
-      
-      <div class="item">
-        <h3>Data Technician – Bootcamp</h3>
-        <p><strong>Just IT </strong> — Mar 2025–Jul 2025</p>
+
+      <div class="item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="800">
+        <h3>Data Technician – Bootcamp - Just IT</h3>
+        <p>Mar 2025–Jul 2025</p>
+        <p>During the 8 weeks bootcamp at Just IT, I learned the following:</p>
         <ul>
-          <p>Activities and societies: Activities and societies: Excel, Tableau, Power BI, Azure, MySQL, Python.Activities and societies: Activities and societies: Excel, Tableau, Power BI, Azure, MySQL, Python.
-          During the 8 weeks bootcamp at Just IT, i learned the following:</p>
           <li>Data, Big Data, Data Structures, Data Architecture & Governance</li>
           <li>Data Analysis using MS Excel</li>
           <li>Introduction to Data Visualisation with MS Excel Tableau and Power BI</li>
           <li>Data Analytics – Power BI</li>
           <li>Introduction to Database- Access & SQL Assignment</li>
-          <li>Azure Fundamentals - Module 1- core data concepts- Software SAAS, Cloud</li>
-          <li>Azure Fundamentals - Module 2- relational data in Azure (DB)</li>
-          <li>Azure Fundamentals - Module 3- Non -relational data in Azure - Access (DB)</li>
-          <li>Azure Fundamentals - Module 4- Fundamentals of data analytics</li>
+          <li>Azure Fundamentals - core data concepts, relational and non-relational data in Azure</li>
           <li>Understanding Azure Data Fabric and Data Lakehouse architecture</li>
           <li>Introduction to event-driven architectures and data ingestion pipelines</li>
-          <li>Data Analysis via Python programming- Utilizing Pandas, Matplotlib & Seaborn</li>
-          <li>Analyzed large datasets using Python and pandas.</li>
-          <li>Created interactive dashboards in Power BI.</li>
+          <li>Data Analysis via Python programming - Utilizing Pandas, Matplotlib & Seaborn</li>
+          <li>Analyzed large datasets using Python and pandas</li>
+          <li>Created interactive dashboards in Power BI</li>
         </ul>
       </div>
     </section>
   </div>
+
+  <!-- AOS Animation JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+      easing: 'ease-out-cubic',
+      duration: 800,
+    });
+  </script>
 
 </body>
 </html>
