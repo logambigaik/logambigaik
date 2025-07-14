@@ -3,217 +3,92 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About Me</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: rgba(255,255,255,1);
-      margin: 0;
-      padding: 20px;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    h1 {
-      text-align: center;
-      color: #2d3748;
-    }
-
-    .accordion {
-      border-radius: 12px;
-      background-color: #fff;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      margin-bottom: 20px;
-      overflow: hidden;
-    }
-
-    .accordion-header {
-      background-color: #2b6cb0;
-      color: white;
-      padding: 18px 24px;
-      cursor: pointer;
-      font-weight: bold;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .accordion-header:hover {
-      background-color: #24548c;
-    }
-
-    .accordion-content {
-      max-height: 0;
-      overflow: hidden;
-      transition: all 0.4s ease;
-      background: #f1f5f9;
-      padding: 0 24px;
-    }
-
-    .accordion-content.show {
-      max-height: 2000px;
-      padding: 20px 24px;
-    }
-
-    .icon {
-      transition: transform 0.4s ease;
-    }
-
-    .icon.rotate {
-      transform: rotate(90deg);
-    }
-
-    .entry-title {
-      font-weight: bold;
-      margin-top: 16px;
-      color: #1a202c;
-    }
-
-    .entry-sub {
-      font-style: italic;
-      color: #4a5568;
-      margin-bottom: 10px;
-    }
-
-    ul {
-      margin: 0 0 20px 20px;
-      padding: 0;
-    }
-
-    p {
-      line-height: 1.6;
-      margin-bottom: 12px;
-    }
-
-    .section-title {
-      font-size: 1.1rem;
-      font-weight: bold;
-      color: #2b6cb0;
-      margin-top: 20px;
-    }
-  </style>
+  <title>Education & IT Experience</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <div class="container">
-    <h1> 🙋 About Me </h1>
+    <h1>About Me</h1>
 
-    <!-- Professional Summary Section -->
-    <div class="accordion">
-      <div class="accordion-header" onclick="toggleAccordion(this)">
-        🧠 Professional Summary <span class="icon">▶</span>
+    <!-- Education Section -->
+    <section class="card">
+      <h2>🎓 Education</h2>
+      <div class="item">
+        <h3>Master of Science in Statistics with Computer Application</h3>
+        <p><strong>Bharathiar University</strong> — 2003–2005</p>
+        <p>Graduated with First Class Honors. Focused on statistics, data structures, and computer applications.</p>
       </div>
-      <div class="accordion-content">
-        <p>
-          I am an enthusiastic, data-driven professional with a strong analytical mindset and a passion for uncovering actionable insights from complex datasets. With proficiency in SQL, Python, Excel, and experience working in cloud environments (AWS, Azure), I specialise in leveraging data to support decision-making, optimise processes, and solve technical challenges.
-          </p>
-        <p>
-          I bring deep expertise in Splunk administration and implementation, including building and managing distributed architectures, configuring components such as search heads, indexers, and forwarders, and developing custom dashboards, alerts, and reports for monitoring and application management. My experience includes working with Linux, Unix, and Windows systems, and configuring Splunk using props.conf, transforms.conf, inputs.conf, and outputs.conf to meet organizational needs.  
-        </p>
-        <p>
-          A highly motivated and detail-oriented professional with a strong focus on solutions. I apply my analytical skills and technical expertise to every task, continuously seeking opportunities to expand my knowledge in data analytic, machine learning, and business intelligence. With a proactive approach to learning, I quickly adapt to new technologies and industry trends. I thrive on tackling complex data projects, automating processes, and making strategic, data-driven decisions that enhance efficiency and innovation. My adaptability, problem-solving mindset, and passion for data make me a valuable asset in any data-driven environment.  
-        </p>
-        <p>
-          I continually invest in upskilling, most recently completing an intensive training in data analytics and cloud technologies. I thrive in dynamic environments that challenge me to learn, adapt, and deliver impactful solutions. My strong problem-solving skills, attention to detail, and passion for data make me a valuable asset to any forward-thinking organisation.
-        </p>
+      <div class="item">
+        <h3>Bachelor of Computer Science </h3>
+        <p><strong>Bharathiar University</strong> — 2000–2003</p>
+        <p>Graduated with First Class Honors. Focused on statistics, data structures, and computer applications.</p>
       </div>
-    </div>
+    </section>
 
-    <!-- Projects Accordion -->
-    <div class="accordion">
-      <div class="accordion-header" onclick="toggleAccordion(this)">
-        💼 Project Highlights <span class="icon">▶</span>
-      </div>
-      <div class="accordion-content">
-        <div class="entry-title">Aviva (via Wipro & Trilogy) – Splunk Admin/Developer</div>
-        <div class="entry-sub">📍 London | Mar 2022 – Mar 2025</div>
+    <!-- IT Experience Section -->
+    <section class="card">
+      <h2>💼 IT Experience</h2>
+      <div class="item">
+        <h3>Splunk Admin/Developer</h3>
+        <p><strong>Aviva</strong> — Mar 2022–Present</p>
         <ul>
-          <li>Installed, configured, and maintained Splunk Enterprise 8.x, including Search Head and Indexer Clusters, Universal and Heavy Forwarders.</li>
-          <li>Designed and implemented high-availability Splunk architectures across multi-data centre environments; supported upgrade and migration efforts to AWS.</li>
-          <li>Developed and optimized dashboards, alerts, reports, and custom queries to support monitoring, performance analysis, and Enterprise Security use cases.</li>
-          <li>On-boarded diverse data sources performed field extractions (regex/delimiters), and automated routine tasks with custom scripts to enhance efficiency.</li>
-          <li>Deployed and managed the Splunk App for Enterprise Security, including correlation searches, risk scoring, and compliance-focused reporting.</li>
-          <li>Collaborated with engineers and analysts to troubleshoot issues, enhance business intelligence insights, and maintain infrastructure health.</li>
-          <li>Managed user roles, permissions, and supported incident/change management processes using BMC Remedy.</li>
+          <li>Worked on full-stack web applications using React, Node.js, and PostgreSQL.</li>
+          <li>Implemented RESTful APIs and optimized database performance.</li>
+          <li>Collaborated with cross-functional teams using Agile methodology.</li>
         </ul>
+      </div>
 
-        <div class="entry-title">Goldman Sachs – Splunk Admin/Developer</div>
-        <div class="entry-sub">📍 London | Mar 2021 – Feb 2022</div>
+      <div class="item">
+        <h3>Splunk Admin/Developer</h3>
+        <p><strong>Aviva</strong> — Mar 2022–Mar 2025</p>
+        <ul>
+         <li>Installed, configured, and maintained Splunk Enterprise 8.x, including Search Head and Indexer Clusters, Universal and Heavy Forwarders.</li>
+         <li>Designed and implemented high-availability Splunk architectures across multi-data centre environments; supported upgrade and migration efforts to AWS.</li>
+         <li>Developed and optimized dashboards, alerts, reports, and custom queries to support monitoring, performance analysis, and Enterprise Security use cases.</li>
+         <li>On-boarded diverse data sources performed field extractions (regex/delimiters), and automated routine tasks with custom scripts to enhance efficiency.</li>
+         <li>Deployed and managed the Splunk App for Enterprise Security, including correlation searches, risk scoring, and compliance-focused reporting.</li>
+         <li>Collaborated with engineers and analysts to troubleshoot issues, enhance business intelligence insights, and maintain infrastructure health.</li>
+         <li>Managed user roles, permissions, and supported incident/change management processes using BMC Remedy.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <h3>Splunk Admin/Developer</h3>
+        <p><strong>Goldman Sachs</strong> — Mar 2021–Feb 2022</p>
         <ul>
           <li>Installed and maintained a distributed Splunk infrastructure with Search Head and Indexer Clustering on AWS; regularly performed upgrades of Splunk instances, syslog servers, and heavy forwarders.</li>
           <li>On-board log data using Universal Forwarders and HTTP Event Collector (HEC); configured inputs via props.conf and transforms.conf to optimize license usage.</li>
-          <li>Developed and maintained dashboards, alerts, and scheduled reports across multiple teams; implemented summary indexing and deep-dive glass tables for performance monitoring.</li>
-          <li>Administered user roles and access controls to align with security and operational requirements, managed license usage and search quotas.</li>
+          <li>Developed and maintained dashboards, alerts, and scheduled reports across multiple teams; implemented summary indexing and deep-dive glass tables for performance monitoring  .</li>
           <li>Created and optimized data models (CIM), dashboards, and alerts for real-time and historical views into business transactions, infrastructure, and application health.</li>
-          <li>Led troubleshooting of Splunk issues (indexing, clustering, SPL errors); collaborated with the Splunk support team for resolution and system tuning.</li>
           <li>Deployed Splunk apps for UNIX/Linux, built use cases for threat detection, and integrated threat intelligence to enhance Enterprise Security functionalities.</li>
         </ul>
-
-        <div class="entry-title">RBS – Splunk Engineer</div>
-        <div class="entry-sub">📍 London | Jun 2020 – Feb 2021</div>
-        <ul>
-          <li>Built dashboards for financial data analysis.</li>
-          <li>Used DB Connect and KV Store for log transformation.</li>
-          <li>Applied summary indexing and alert tuning.</li>
-          <li>Developed complex SPL queries, regular expressions, and field extractions for diverse log sources, applied data masking with SED for sensitive information.</li>
-          <li>Implemented summary indexing for performance gains; monitored license usage with custom dashboards and alerts.</li>
-          <li>Enhanced modularity with tags and event types; maintained data consistency and dashboard scalability across teams.</li>
-        </ul>
       </div>
-    </div>
-
-    <!-- Education Accordion -->
-    <div class="accordion">
-      <div class="accordion-header" onclick="toggleAccordion(this)">
-        🎓 Education & Certifications <span class="icon">▶</span>
-      </div>
-      <div class="accordion-content">
-        <div class="entry-title">Just IT Training Ltd, London, UK</div>
-        <div class="entry-sub">📅 2024 – 2025 | Digital Skills Bootcamp – Data Technician</div>
+      
+      <div class="item">
+        <h3>Data Technician – Bootcamp</h3>
+        <p><strong>Just IT </strong> — Mar 2025–Jul 2025</p>
         <ul>
-          <li>Data, Big Data and Data Structures</li>
-          <li>Data Architecture & Governance</li>
+          <p>Activities and societies: Activities and societies: Excel, Tableau, Power BI, Azure, MySQL, Python.Activities and societies: Activities and societies: Excel, Tableau, Power BI, Azure, MySQL, Python.
+          During the 8 weeks bootcamp at Just IT, i learned the following:</p>
+          <li>Data, Big Data, Data Structures, Data Architecture & Governance</li>
           <li>Data Analysis using MS Excel</li>
-          <li>Introduction to Data Visualization with MS Excel Tableau and Power BI</li>
-          <li>Module 4- Data Analytics – Power BI</li>
+          <li>Introduction to Data Visualisation with MS Excel Tableau and Power BI</li>
+          <li>Data Analytics – Power BI</li>
           <li>Introduction to Database- Access & SQL Assignment</li>
-          <li>Azure Fundamentals - Module 4- Fundamentals of data analytics (Fabric)</li>
-          <li>Azure Fundamentals - Module 3- Non -relational data in Azure - Access (DB)</li>
-          <li>Azure Fundamentals - Module 2- relational data in Azure (DB)</li>
           <li>Azure Fundamentals - Module 1- core data concepts- Software SAAS, Cloud</li>
-          <li>Introduction using R analytical - Data cleaning and EDA with R Studio and R programming</li>
-          <li>Data Analysis via Python programming- Utilising Pandas, Matplotlib & Seaborn</li>
-        </ul>
-
-        <div class="entry-title">Bharathiar University, India</div>
-        <div class="entry-sub">📅 2003 – 2005 | M.Sc. in Statistics with Computer Applications – 75%</div>
-
-        <div class="section-title">🏅 Professional Certifications</div>
-        <ul>
-          <li>Splunk Certified Cloud Admin</li>
-          <li>Splunk Core Certified Power User</li>
+          <li>Azure Fundamentals - Module 2- relational data in Azure (DB)</li>
+          <li>Azure Fundamentals - Module 3- Non -relational data in Azure - Access (DB)</li>
+          <li>Azure Fundamentals - Module 4- Fundamentals of data analytics</li>
+          <li>Understanding Azure Data Fabric and Data Lakehouse architecture</li>
+          <li>Introduction to event-driven architectures and data ingestion pipelines</li>
+          <li>Data Analysis via Python programming- Utilizing Pandas, Matplotlib & Seaborn</li>
+          <li>Analyzed large datasets using Python and pandas.</li>
+          <li>Created interactive dashboards in Power BI.</li>
         </ul>
       </div>
-    </div>
+    </section>
   </div>
 
-  <script>
-    function toggleAccordion(header) {
-      const icon = header.querySelector(".icon");
-      const content = header.nextElementSibling;
-
-      const isOpen = content.classList.contains("show");
-
-      document.querySelectorAll(".accordion-content").forEach(c => c.classList.remove("show"));
-      document.querySelectorAll(".icon").forEach(i => i.classList.remove("rotate"));
-
-      if (!isOpen) {
-        content.classList.add("show");
-        icon.classList.add("rotate");
-      }
-    }
-  </script>
 </body>
 </html>
