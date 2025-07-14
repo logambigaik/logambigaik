@@ -173,6 +173,37 @@ header {
       line-height: 1.6;
     }
 
+      .lab {
+      border-left: 4px solid #0078d4;
+      padding: 12px 16px;
+      margin: 10px 0;
+      background: #f9f9fc;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .lab:hover {
+      transform: scale(1.03);
+      background-color: #eaf4ff;
+    }
+
+    .lab-title {
+      font-weight: bold;
+      color: #1d3557;
+    }
+
+    .lab-desc {
+      font-size: 0.95em;
+      margin-top: 4px;
+    }
+
+    .icon {
+      transition: transform 0.4s ease;
+    }
+
+    .icon.rotate {
+      transform: rotate(90deg);
+    }
+
 @media (max-width: 600px) {
   .modern-header h1 {
     font-size: 1.5rem;
@@ -192,7 +223,7 @@ header {
 </head>
 <body>
   <header>
-    <h1>My Tableau Projects</h1>
+    <h1>My PowerBI Projects</h1>
   </header>
 
   <div class="container">
