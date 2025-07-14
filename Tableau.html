@@ -15,12 +15,16 @@
     }
 
     header {
-      background: url('https://source.unsplash.com/1600x400/?data,technology') center/cover no-repeat;
+      background: linear-gradient(to right, #1f77b4, #2ca02c), 
+              url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Tableau_Logo.png/600px-Tableau_Logo.png') no-repeat right center;
+      background-size: cover;
       color: white;
+      padding: 20px;
       text-align: center;
-      padding: 40px 20px 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      position: relative;
+      border-radius: 0 0 20px 20px;
     }
-
     header h1 {
       margin: 0;
       font-size: 2rem;
@@ -125,16 +129,21 @@
       line-height: 1.6;
     }
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.5rem;
-        padding: 8px 16px;
-      }
+  @media (max-width: 600px) {
+  header h1 {
+    font-size: 1.4rem;
+    padding: 10px;
+  }
 
-      iframe {
-        height: 300px;
-      }
-    }
+  iframe {
+    height: 300px;
+  }
+
+  header {
+    background-position: center;
+  }
+}
+
   </style>
 </head>
 <body>
