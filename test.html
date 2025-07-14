@@ -402,20 +402,13 @@
     });
   });
 
-
-  function toggleAccordion(header) {
-    const content = header.nextElementSibling;
-    const icon = header.querySelector(".icon");
-
-    if (content.classList.contains("open")) {
-      content.classList.remove("open");
-      icon.classList.remove("rotate");
-    } else {
-      content.classList.add("open");
-      icon.classList.add("rotate");
+  <script>
+    function toggleAccordion(element) {
+      const content = element.nextElementSibling;
+      const icon = element.querySelector('.icon');
+      content.classList.toggle('open');
+      icon.classList.toggle('rotate');
     }
-  }
-
 
 </script>
 </body>
