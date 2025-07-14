@@ -313,25 +313,26 @@ header {
     </div>
 
   </div>
+  </div>
+<script>
+  const headers = document.querySelectorAll('.accordion-header');
 
-  <script>
-    const headers = document.querySelectorAll('.accordion-header');
+  headers.forEach(header => {
+    header.addEventListener('click', () => {
+      const content = header.nextElementSibling;
+      const icon = header.querySelector(".icon");
 
-    headers.forEach(header => {
-      header.addEventListener('click', () => {
-        const content = header.nextElementSibling;
-        const icon = header.querySelector(".icon");
-        const isOpen = content.style.display === 'block';
+      // Close all sections
+      document.querySelectorAll('.accordion-content').forEach(c => c.classList.remove('open'));
+      document.querySelectorAll('.icon').forEach(i => i.classList.remove('rotate'));
 
-        document.querySelectorAll('.accordion-content').forEach(c => c.style.display = 'none');
-        document.querySelectorAll('.icon').forEach(i => i.classList.remove('rotate'));
-
-        if (!isOpen) {
-          content.style.display = 'block';
-          icon.classList.add('rotate');
-        }
-      });
+      // If the clicked section was not open, open it
+      if (!content.classList.contains('open')) {
+        content.classList.add('open');
+        icon.classList.add('rotate');
+      }
     });
-  </script>
+  });
+</script>
   </body>
 </html>
