@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tableau Projects Portfolio</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background: url('https://source.unsplash.com/1600x400/?data,technology') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 40px 20px 20px;
+      position: relative;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 15px;
+    }
+
+    .accordion {
+      background-color: #fff;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      margin-bottom: 12px;
+      overflow: hidden;
+      transition: box-shadow 0.2s;
+    }
+
+    .accordion summary {
+      cursor: pointer;
+      padding: 15px 20px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      background-color: #eaeaea;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .accordion summary:hover {
+      background-color: #dcdcdc;
+    }
+
+    .accordion[open] {
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .accordion-content {
+      padding: 15px 20px;
+      background-color: #fff;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 15px 10px;
+      font-size: 0.9rem;
+      margin-top: 50px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+        padding: 8px 16px;
+      }
+
+      iframe {
+        height: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My Tableau Portfolio</h1>
+  </header>
+
+  <div class="container">
+    <!-- Example Project Accordion -->
+    <details class="accordion">
+      <summary>📊 Sales Dashboard</summary>
+      <div class="accordion-content">
+        <iframe src="https://public.tableau.com/views/RegionalSampleWorkbook/Storms" allowfullscreen></iframe>
+      </div>
+    </details>
+
+    <details class="accordion">
+      <summary>📈 Financial Performance</summary>
+      <div class="accordion-content">
+        <iframe src="https://public.tableau.com/views/WorldIndicators/GDPpercapita" allowfullscreen></iframe>
+      </div>
+    </details>
+  </div>
+
+  <footer>
+    &copy; 2025 My Tableau Portfolio. All rights reserved.
+  </footer>
+
+</body>
+</html>
