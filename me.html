@@ -113,14 +113,27 @@
       }
     }
   </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.10.2/lottie.min.js"></script>
+  
 </head>
 <body>
 
   <div class="container">
     <h1 data-aos="fade-down" data-aos-duration="800">🙋 About Me</h1>
 
-    <img src="https://www.linkedin.com/in/logak/" alt="Profile Image" class="profile-img" data-aos="zoom-in" data-aos-duration="800" />
+<!--     <img src="https://www.linkedin.com/in/logak/" alt="Profile Image" class="profile-img" data-aos="zoom-in" data-aos-duration="800" /> -->
+    <div id="lottie-data" style="width:200px; height:200px;"></div>
 
+    <script>
+          lottie.loadAnimation({
+              container: document.getElementById('lottie-data'),
+              renderer: 'svg',
+              loop: true,
+              autoplay: true,
+              path: 'https://assets7.lottiefiles.com/packages/lf20_jcikwtux.json' // example data animation JSON URL
+          });
+    </script>
+    
     <!-- Education Section -->
     <section class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
       <h2>🎓 Education</h2>
