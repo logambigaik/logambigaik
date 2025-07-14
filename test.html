@@ -5,14 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tableau Projects</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 20px;
     }
-
     header {
       background: linear-gradient(to right, #1f77b4, #2ca02c), 
                   url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Tableau_Logo.png/600px-Tableau_Logo.png') no-repeat right center;
@@ -29,7 +27,7 @@
       position: absolute;
       top: 0; left: 0;
       width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.3); /* dark overlay */
+      background: rgba(0, 0, 0, 0.3);
       z-index: 0;
     }
     header h1 {
@@ -43,22 +41,18 @@
       position: relative;
       z-index: 1;
     }
-
-    footer {
-      background-color: #337EA9;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      font-size: 1rem;
-      border-top: 4px solid #005a9e;
-    }
     .container {
       max-width: 1200px;
       margin: auto;
     }
-    h1 {
-      text-align: center;
-      color: #2d3748;
+    .intro {
+      background-color: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+      font-size: 1rem;
+      line-height: 1.6;
     }
     .accordion {
       background-color: #ffffff;
@@ -104,11 +98,6 @@
       transform: scale(1.02);
       background-color: #cbd5e1;
     }
-    img {
-      max-width: 100%;
-      border-radius: 8px;
-      margin-top: 15px;
-    }
     .icon {
       transition: transform 0.4s ease;
       display: inline-block;
@@ -122,22 +111,13 @@
       height: 500px;
       border: none;
     }
-    .intro {
-      background-color: #fff;
+    footer {
+      background-color: #337EA9;
+      color: white;
+      text-align: center;
       padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
       font-size: 1rem;
-      line-height: 1.6;
-    }
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.5rem;
-      }
-      .accordion-header {
-        font-size: 1rem;
-      }
+      border-top: 4px solid #005a9e;
     }
   </style>
 </head>
@@ -147,7 +127,6 @@
   </header>
 
   <div class="container">
-    <!-- Intro Paragraph -->
     <div class="intro">
       <p>
         Utilized visual storytelling techniques to design intuitive dashboards focused on sales and employment analysis.
@@ -156,8 +135,19 @@
       </p>
     </div>
 
-    <!-- Existing Projects -->
+    <!-- Accordion Template -->
+    <script>
+      function toggleAccordion(header) {
+        const content = header.nextElementSibling;
+        const icon = header.querySelector('.icon');
+        content.classList.toggle("open");
+        icon.classList.toggle("rotate");
+      }
+    </script>
 
+    <!-- ACCORDION ITEMS BELOW -->
+
+    <!-- Project 1 -->
     <div class="accordion">
       <div class="accordion-header" onclick="toggleAccordion(this)">
         Project 1: Superstore Sales Analytics <span class="icon">▶</span>
@@ -166,31 +156,34 @@
         <div class="zoom-box">
           <strong>Project Summary:</strong>
           <ul>
-            <li>Interactive Tableau dashboard analyzing Superstore performance across key business dimensions. The visualization provides actionable insights into regional sales, shipping efficiency, profitability, and order prioritization.</li>
+            <li>Interactive dashboard analyzing Superstore performance across regions, shipping, and profits.</li>
           </ul>
         </div>
         <div class="zoom-box">
           <strong>My Dashboard</strong><br>
-          <div class='tableauPlaceholder' id='viz1752511775907' style='position: relative'><noscript><a href='#'><img alt=' Superstore sales overview ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Su&#47;Superstoresalesoverview_17466269298260&#47;SuperstoreSalesOverview&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Superstoresalesoverview_17466269298260&#47;SuperstoreSalesOverview' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Su&#47;Superstoresalesoverview_17466269298260&#47;SuperstoreSalesOverview&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-GB' /></object></div>             
-          <script type='text/javascript'>                   
-             var divElement = document.getElementById('viz1752512758117');                   
-             var vizElement = divElement.getElementsByTagName('object')[0];                   
-             if ( divElement.offsetWidth > 800 ) { 
-               vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} 
-            else if ( divElement.offsetWidth > 500 ) { 
-              vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} 
-            else { 
-              vizElement.style.width='100%';vizElement.style.minHeight='2650px';
-              vizElement.style.maxHeight=(divElement.offsetWidth*1.77)+'px';
-              }                    
-            var scriptElement = document.createElement('script');                    
-            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+          <div class='tableauPlaceholder' id='viz1' style='position: relative'>
+            <noscript><a href='#'><img alt='Superstore Dashboard' src='https://public.tableau.com/static/images/Su/Superstoresalesoverview_17466269298260/SuperstoreSalesOverview/1_rss.png' /></a></noscript>
+            <object class='tableauViz' style='display:none;'>
+              <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+              <param name='embed_code_version' value='3' />
+              <param name='name' value='Superstoresalesoverview_17466269298260/SuperstoreSalesOverview' />
+              <param name='tabs' value='no' /><param name='toolbar' value='yes' />
+            </object>
+          </div>
+          <script type='text/javascript'>
+            var divElement = document.getElementById('viz1');
+            var vizElement = divElement.getElementsByTagName('object')[0];
+            vizElement.style.width='100%';
+            vizElement.style.height='600px';
+            var scriptElement = document.createElement('script');
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
             vizElement.parentNode.insertBefore(scriptElement, vizElement);
-           </script>
+          </script>
         </div>
       </div>
     </div>
 
+    <!-- Project 2 -->
     <div class="accordion">
       <div class="accordion-header" onclick="toggleAccordion(this)">
         Project 2: UK Employment Data Analysis <span class="icon">▶</span>
@@ -199,34 +192,34 @@
         <div class="zoom-box">
           <strong>Project Summary:</strong>
           <ul>
-            <li>Data-driven visual analysis focusing on UK employment trends, sectors, and workforce changes over recent years. Designed interactive charts to allow stakeholders to explore employment shifts by region and industry.</li>
+            <li>Data-driven visuals highlighting employment trends across UK sectors and regions.</li>
           </ul>
         </div>
         <div class="zoom-box">
           <strong>My Dashboard</strong><br>
-            <div class='tableauPlaceholder' id='viz1752511949867' style='position: relative'><noscript><a href='#'><img alt='UK Employment Dashboard ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;UK&#47;UKEmploymentData_17466118827160&#47;UKDashboard&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='views&#47;UKEmploymentData_17466118827160&#47;UKDashboard?:language=en-GB&amp;:embed=true&amp;:sid=&amp;:redirect=auth' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;UK&#47;UKEmploymentData_17466118827160&#47;UKDashboard&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-GB' /></object></div> 
-          <script type='text/javascript'>                   
-             var divElement = document.getElementById('viz1752512758117');                   
-             var vizElement = divElement.getElementsByTagName('object')[0];                   
-             if ( divElement.offsetWidth > 800 ) { 
-               vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} 
-            else if ( divElement.offsetWidth > 500 ) { 
-              vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} 
-            else { 
-              vizElement.style.width='100%';vizElement.style.minHeight='2650px';
-              vizElement.style.maxHeight=(divElement.offsetWidth*1.77)+'px';
-              }                    
-            var scriptElement = document.createElement('script');                    
-            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+          <div class='tableauPlaceholder' id='viz2' style='position: relative'>
+            <noscript><a href='#'><img alt='UK Employment Dashboard' src='https://public.tableau.com/static/images/UK/UKEmploymentData_17466118827160/UKDashboard/1_rss.png' /></a></noscript>
+            <object class='tableauViz' style='display:none;'>
+              <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+              <param name='embed_code_version' value='3' />
+              <param name='path' value='views/UKEmploymentData_17466118827160/UKDashboard?:embed=y&:display_count=yes' />
+              <param name='toolbar' value='yes' />
+            </object>
+          </div>
+          <script type='text/javascript'>
+            var divElement = document.getElementById('viz2');
+            var vizElement = divElement.getElementsByTagName('object')[0];
+            vizElement.style.width='100%';
+            vizElement.style.height='600px';
+            var scriptElement = document.createElement('script');
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
             vizElement.parentNode.insertBefore(scriptElement, vizElement);
-           </script>
+          </script>
         </div>
       </div>
     </div>
 
-    
-    <!-- New Projects -->
-
+    <!-- Project 3: HR -->
     <div class="accordion">
       <div class="accordion-header" onclick="toggleAccordion(this)">
         Project 3: HR Employee Insights <span class="icon">▶</span>
@@ -235,31 +228,33 @@
         <div class="zoom-box">
           <strong>Project Summary:</strong>
           <ul>
-            <li>Dashboard focused on employee demographics, turnover rates, and performance metrics to support HR strategic planning and workforce management.</li>
+            <li>Focused on demographics, turnover, and KPIs to assist workforce management.</li>
           </ul>
         </div>
         <div class="zoom-box">
           <strong>My Dashboard</strong><br>
-          <div class='tableauPlaceholder' id='viz1752512064482' style='position: relative'><noscript><a href='#'><img alt='HR ANALYTICS DASHBOARD ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;HR&#47;HR_Data_Analytic_17520615340030&#47;HRANALYTICSDASHBOARD&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='HR_Data_Analytic_17520615340030&#47;HRANALYTICSDASHBOARD' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;HR&#47;HR_Data_Analytic_17520615340030&#47;HRANALYTICSDASHBOARD&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-GB' /></object></div>   
-           <script type='text/javascript'>                   
-             var divElement = document.getElementById('viz1752512758117');                   
-             var vizElement = divElement.getElementsByTagName('object')[0];                   
-             if ( divElement.offsetWidth > 800 ) { 
-               vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} 
-            else if ( divElement.offsetWidth > 500 ) { 
-              vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} 
-            else { 
-              vizElement.style.width='100%';vizElement.style.minHeight='2650px';
-              vizElement.style.maxHeight=(divElement.offsetWidth*1.77)+'px';
-              }                    
-            var scriptElement = document.createElement('script');                    
-            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+          <div class='tableauPlaceholder' id='viz3' style='position: relative'>
+            <noscript><a href='#'><img alt='HR Dashboard' src='https://public.tableau.com/static/images/HR/HR_Data_Analytic_17520615340030/HRANALYTICSDASHBOARD/1_rss.png' /></a></noscript>
+            <object class='tableauViz' style='display:none;'>
+              <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+              <param name='name' value='HR_Data_Analytic_17520615340030/HRANALYTICSDASHBOARD' />
+              <param name='toolbar' value='yes' />
+            </object>
+          </div>
+          <script type='text/javascript'>
+            var divElement = document.getElementById('viz3');
+            var vizElement = divElement.getElementsByTagName('object')[0];
+            vizElement.style.width='100%';
+            vizElement.style.height='600px';
+            var scriptElement = document.createElement('script');
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
             vizElement.parentNode.insertBefore(scriptElement, vizElement);
-           </script>       
+          </script>
         </div>
       </div>
     </div>
 
+    <!-- Project 4: Airplane -->
     <div class="accordion">
       <div class="accordion-header" onclick="toggleAccordion(this)">
         Project 4: Airplane Fleet Performance <span class="icon">▶</span>
@@ -268,30 +263,33 @@
         <div class="zoom-box">
           <strong>Project Summary:</strong>
           <ul>
-            <li>Visualization tracking airplane fleet operational metrics including flight hours, maintenance schedules, and fuel efficiency to optimize airline performance.</li>
+            <li>Tracks flight hours, maintenance, and fuel use to optimize fleet operations.</li>
           </ul>
         </div>
         <div class="zoom-box">
           <strong>My Dashboard</strong><br>
-          <div class='tableauPlaceholder' id='viz1752512236971' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ai&#47;AirplaneWildlifeStrikes_17522233992050&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='AirplaneWildlifeStrikes_17522233992050&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ai&#47;AirplaneWildlifeStrikes_17522233992050&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-GB' /></object></div>       
-          <script type='text/javascript'>                   
-             var divElement = document.getElementById('viz1752512758117');                   
-             var vizElement = divElement.getElementsByTagName('object')[0];                   
-             if ( divElement.offsetWidth > 800 ) { 
-               vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} 
-            else if ( divElement.offsetWidth > 500 ) { 
-              vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} 
-            else { 
-              vizElement.style.width='100%';vizElement.style.minHeight='2650px';
-              vizElement.style.maxHeight=(divElement.offsetWidth*1.77)+'px';
-              }                    
-            var scriptElement = document.createElement('script');                    
-            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+          <div class='tableauPlaceholder' id='viz4' style='position: relative'>
+            <noscript><a href='#'><img alt='Fleet Dashboard' src='https://public.tableau.com/static/images/Ai/AirplaneWildlifeStrikes_17522233992050/Dashboard1/1_rss.png' /></a></noscript>
+            <object class='tableauViz' style='display:none;'>
+              <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+              <param name='name' value='AirplaneWildlifeStrikes_17522233992050/Dashboard1' />
+              <param name='toolbar' value='yes' />
+            </object>
+          </div>
+          <script type='text/javascript'>
+            var divElement = document.getElementById('viz4');
+            var vizElement = divElement.getElementsByTagName('object')[0];
+            vizElement.style.width='100%';
+            vizElement.style.height='600px';
+            var scriptElement = document.createElement('script');
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
             vizElement.parentNode.insertBefore(scriptElement, vizElement);
-           </script>
+          </script>
+        </div>
       </div>
     </div>
 
+    <!-- Project 5: NYC Transport -->
     <div class="accordion">
       <div class="accordion-header" onclick="toggleAccordion(this)">
         Project 5: NYC Transportation Analytics <span class="icon">▶</span>
@@ -300,51 +298,37 @@
         <div class="zoom-box">
           <strong>Project Summary:</strong>
           <ul>
-            <li>Dashboard analyzing NYC public transportation usage patterns, congestion data, and route performance to support urban planning initiatives.</li>
+            <li>Analyzed subway ridership, congestion, and route efficiency to support city planning.</li>
           </ul>
         </div>
         <div class="zoom-box">
           <strong>My Dashboard</strong><br>
-          <div class='tableauPlaceholder' id='viz1752512236971' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ai&#47;AirplaneWildlifeStrikes_17522233992050&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='AirplaneWildlifeStrikes_17522233992050&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ai&#47;AirplaneWildlifeStrikes_17522233992050&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-GB' /></object></div>       
-           <script type='text/javascript'>                   
-             var divElement = document.getElementById('viz1752512758117');                   
-             var vizElement = divElement.getElementsByTagName('object')[0];                   
-             if ( divElement.offsetWidth > 800 ) { 
-               vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} 
-            else if ( divElement.offsetWidth > 500 ) { 
-              vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} 
-            else { 
-              vizElement.style.width='100%';vizElement.style.minHeight='2650px';
-              vizElement.style.maxHeight=(divElement.offsetWidth*1.77)+'px';
-              }                    
-            var scriptElement = document.createElement('script');                    
-            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+          <!-- Replace with correct NYC dashboard URL here -->
+          <div class='tableauPlaceholder' id='viz5' style='position: relative'>
+            <noscript><a href='#'><img alt='NYC Dashboard' src='https://public.tableau.com/static/images/NYC_Sample_Image.png' /></a></noscript>
+            <object class='tableauViz' style='display:none;'>
+              <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+              <param name='name' value='YOUR_NYC_PROJECT/Dashboard' />
+              <param name='toolbar' value='yes' />
+            </object>
+          </div>
+          <script type='text/javascript'>
+            var divElement = document.getElementById('viz5');
+            var vizElement = divElement.getElementsByTagName('object')[0];
+            vizElement.style.width='100%';
+            vizElement.style.height='600px';
+            var scriptElement = document.createElement('script');
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
             vizElement.parentNode.insertBefore(scriptElement, vizElement);
-           </script>
+          </script>
         </div>
       </div>
     </div>
 
   </div>
 
-
-<script>
-    
-    function toggleAccordion(header) {
-      const content = header.nextElementSibling;
-      const icon = header.querySelector('.icon');
-      const isOpen = content.classList.contains('open');
-
-      if (isOpen) {
-        content.classList.remove('open');
-        icon.classList.remove('rotate');
-        header.setAttribute('aria-expanded', 'false');
-      } else {
-        content.classList.add('open');
-        icon.classList.add('rotate');
-        header.setAttribute('aria-expanded', 'true');
-      }
-    }
-  </script>
+  <footer>
+    © 2025 My Tableau Portfolio | All rights reserved
+  </footer>
 </body>
 </html>
