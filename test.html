@@ -9,48 +9,12 @@
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-/*       background-color: #fff; */
-/*       background-image: url("bgimg_website.png"); */
       margin: 0;
       padding: 20px;
     }
-    
 
-  .modern-header {
-  background-color: #1f77b4; 
-  padding: 30px 20px;
-  border-bottom: 5px solid #2ca02c;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-.header-content {
-  max-width: 1000px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.logo {
-  height: 60px;
-  width: auto;
-  border-radius: 10px;
-}
-
-.modern-header h1 {
-  color: white;
-  font-size: 2.2rem;
-  font-weight: 600;
-  margin: 0;
-}
-
-header {
-      background: linear-gradient(to right, #1f77b4, #2ca02c), 
-              url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Tableau_Logo.png/600px-Tableau_Logo.png') no-repeat right center;
-      background-size: cover;
+    header {
+      background: linear-gradient(to right, #1f77b4, #2ca02c);
       color: white;
       padding: 20px;
       text-align: center;
@@ -58,71 +22,30 @@ header {
       position: relative;
       border-radius: 0 0 20px 20px;
     }
-    header::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.3); /* dark overlay */
-      z-index: 0;
-    }
     header h1 {
       margin: 0;
       font-size: 2rem;
-      color: white;
       background-color: rgba(0, 0, 0, 0.5);
       display: inline-block;
       padding: 10px 20px;
       border-radius: 10px;
-      position: relative;
-      z-index: 1;
     }
 
-
-    
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 10px;
-    }
-
-    table th, table td {
-      border: 1px solid #ccc;
-      padding: 8px 12px;
-      text-align: left;
-    }
-
-    table th {
-      background-color: #e2e8f0;
-    }
-
-    .section-title {
-      font-weight: bold;
-      font-size: 1.1rem;
-      color: #2b6cb0;
-      margin-top: 20px;
-    }
-
-
-
-    footer {
-      background-color: #337EA9;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      font-size: 1rem;
-      border-top: 4px solid #005a9e;
-    }
     .container {
       max-width: 1200px;
       margin: auto;
     }
-    h1 {
-      text-align: center;
-      color: #2d3748;
+
+    .intro {
+      background-color: #fff;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 8px;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+      font-size: 1rem;
+      line-height: 1.6;
     }
 
-    
     .accordion {
       background-color: #ffffff;
       border-radius: 12px;
@@ -130,13 +53,7 @@ header {
       margin: 20px 0;
       overflow: hidden;
     }
-    .accordion-section {
-      margin-bottom: 15px;
-      border-radius: 8px;
-      overflow: hidden;
-      background-color: rgba(255,255,255,1);
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
+
     .accordion-header {
       background-color: #2b6cb0;
       color: white;
@@ -148,9 +65,11 @@ header {
       justify-content: space-between;
       align-items: center;
     }
+
     .accordion-header:hover {
       background-color: #24548c;
     }
+
     .accordion-content {
       max-height: 0;
       overflow: hidden;
@@ -158,108 +77,58 @@ header {
       background: #f1f5f9;
       padding: 0 24px;
     }
+
     .accordion-content.open {
       max-height: 2000px;
       padding: 20px 24px;
     }
 
-    
     .zoom-box {
-/*       background-color: #e2e8f0; */
       padding: 18px;
       margin: 10px 0;
       border-radius: 8px;
       transition: transform 0.3s ease;
     }
+
     .zoom-box:hover {
       transform: scale(1.02);
-/*       background-color: #cbd5e1; */
     }
+
     img {
       max-width: 100%;
       border-radius: 8px;
       margin-top: 15px;
     }
+
     .icon {
       transition: transform 0.4s ease;
     }
+
     .icon.rotate {
       transform: rotate(90deg);
     }
-    .screenshot-scroll {
-      max-height: 900px;
-      overflow: auto;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      padding: 10px;
-      background-color: #f9fafb;
-    }
 
-    iframe {
-      width: 100%;
-      height: 500px;
-      border: none;
-    }
-    
-    .intro {
-      background-color: #fff;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-      font-size: 1rem;
-      line-height: 1.6;
-    }
-
-      .lab {
-      border-left: 4px solid #0078d4;
-      padding: 12px 16px;
-      margin: 10px 0;
-      background: #f9f9fc;
-      transition: transform 0.3s ease, background 0.3s ease;
-    }
-
-    .lab:hover {
-      transform: scale(1.03);
-      background-color: #eaf4ff;
-    }
-
-    .lab-title {
+    .section-title {
       font-weight: bold;
-      color: #1d3557;
+      font-size: 1.1rem;
+      color: #2b6cb0;
+      margin-top: 20px;
     }
 
-    .lab-desc {
-      font-size: 0.95em;
-      margin-top: 4px;
+    a {
+      color: #1f77b4;
+      text-decoration: none;
     }
 
-    .icon {
-      transition: transform 0.4s ease;
+    a:hover {
+      text-decoration: underline;
     }
 
-    .icon.rotate {
-      transform: rotate(90deg);
-    }
-
-@media (max-width: 600px) {
-  .modern-header h1 {
-    font-size: 1.5rem;
-  }
-
-  .logo {
-    height: 40px;
-  }
-
-  .header-content {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .accordion-header {
+    @media (max-width: 600px) {
+      .accordion-header {
         font-size: 1em;
-  }
-}
-
+      }
+    }
   </style>
 </head>
 <body>
