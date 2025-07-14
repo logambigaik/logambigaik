@@ -322,12 +322,15 @@ header {
       const content = header.nextElementSibling;
       const icon = header.querySelector(".icon");
 
+      // Toggle this specific section
+      const isOpen = content.classList.contains('open');
+
       // Close all sections
       document.querySelectorAll('.accordion-content').forEach(c => c.classList.remove('open'));
       document.querySelectorAll('.icon').forEach(i => i.classList.remove('rotate'));
 
-      // If the clicked section was not open, open it
-      if (!content.classList.contains('open')) {
+      // Open this one only if it was closed
+      if (!isOpen) {
         content.classList.add('open');
         icon.classList.add('rotate');
       }
