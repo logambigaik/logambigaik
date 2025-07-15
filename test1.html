@@ -377,7 +377,7 @@ header {
    
 <script src="https://public.tableau.com/javascripts/api/viz_v1.js"></script>
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
     function toggleAccordion(header) {
       const icon = header.querySelector(".icon");
       const content = header.nextElementSibling;
@@ -423,6 +423,24 @@ header {
       document.body.appendChild(script);
     }; -->
   </script>  
-  </body>  
+  </body>   -->
+
+  <script type="text/javascript">
+  function toggleAccordion(header) {
+    const icon = header.querySelector(".icon");
+    const content = header.nextElementSibling;
+    const isOpen = content.classList.contains("open");
+
+    // Collapse all others
+    document.querySelectorAll(".accordion-content").forEach(c => c.classList.remove("open"));
+    document.querySelectorAll(".icon").forEach(i => i.classList.remove("rotate"));
+
+    // Expand the selected
+    if (!isOpen) {
+      content.classList.add("open");
+      icon.classList.add("rotate");
+    }
+  }
+</script>
   </body>
 </html>
